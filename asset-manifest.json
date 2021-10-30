@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/todo_web_mern_frontend/static/css/main.d03ffed7.chunk.css",
+    "main.js": "/todo_web_mern_frontend/static/js/main.99625dfe.chunk.js",
+    "main.js.map": "/todo_web_mern_frontend/static/js/main.99625dfe.chunk.js.map",
+    "runtime-main.js": "/todo_web_mern_frontend/static/js/runtime-main.597f0a79.js",
+    "runtime-main.js.map": "/todo_web_mern_frontend/static/js/runtime-main.597f0a79.js.map",
+    "static/js/2.42b07202.chunk.js": "/todo_web_mern_frontend/static/js/2.42b07202.chunk.js",
+    "static/js/2.42b07202.chunk.js.map": "/todo_web_mern_frontend/static/js/2.42b07202.chunk.js.map",
+    "index.html": "/todo_web_mern_frontend/index.html",
+    "precache-manifest.dc725de7bf45fb46e96d288b5a71c816.js": "/todo_web_mern_frontend/precache-manifest.dc725de7bf45fb46e96d288b5a71c816.js",
+    "service-worker.js": "/todo_web_mern_frontend/service-worker.js",
+    "static/css/main.d03ffed7.chunk.css.map": "/todo_web_mern_frontend/static/css/main.d03ffed7.chunk.css.map",
+    "static/js/2.42b07202.chunk.js.LICENSE.txt": "/todo_web_mern_frontend/static/js/2.42b07202.chunk.js.LICENSE.txt",
+    "static/media/study.png": "/todo_web_mern_frontend/static/media/study.0266b5a3.png",
+    "static/media/study.gif": "/todo_web_mern_frontend/static/media/study.dec78257.gif"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.597f0a79.js",
+    "static/js/2.42b07202.chunk.js",
+    "static/css/main.d03ffed7.chunk.css",
+    "static/js/main.99625dfe.chunk.js"
+  ]
+}
