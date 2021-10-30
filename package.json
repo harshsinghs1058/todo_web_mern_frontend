@@ -1,5 +1,5 @@
 {
-  "name": "blog_web_frontend",
+  "name": "todo_web_frontend",
   "version": "0.1.0",
   "private": true,
   "homepage": "https://harshsinghs1058.github.io/todo_web_mern_frontend",
@@ -10,8 +10,7 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "^3.4.4",
-    "web-vitals": "^1.0.1",
-    "webpack": "^5.61.0"
+    "web-vitals": "^1.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
