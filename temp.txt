@@ -1,0 +1,7 @@
+/* CSS HEX */
+--rich-black-fogra-29: #000e14ff;
+--tufts-blue: #0092e0ff;
+--maximum-red: #d62828ff;
+--orange: #f77f00ff;
+--maximum-yellow-red: #fcbf49ff;
+--lemon-meringue: #eae2b7ff;
