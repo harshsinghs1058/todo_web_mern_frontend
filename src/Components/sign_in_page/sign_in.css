@@ -1,24 +1,20 @@
-.sign_up_page {
-    width: 100%;
-    height: 100%;
+@keyframes start_bg_sing_in {
+    from {
+        right: 0%;
+        border-radius: 0%;
+    }
+    to {}
 }
 
-@keyframes startBg {
+@keyframes start_sign_up_div {
     from {
-        border-radius: 0;
-        left: 0;
+        right: 150%;
     }
 }
 
-@keyframes startSignInDiv {
+@keyframes start_form_sing_in {
     from {
-        left: 150%;
-    }
-}
-
-@keyframes startForm {
-    from {
-        left: -50%;
+        right: -50%;
     }
 }
 
@@ -28,24 +24,24 @@
     }
 }
 
-.sign_up_page .container {
+.sign_in_page .container {
     position: fixed;
     height: 1500px;
     width: 2000px;
-    background-image: linear-gradient(-45deg, #0092E0 0%, #04befe 100%);
+    background-image: linear-gradient(45deg, #0092E0 0%, #04befe 100%);
     background-repeat: no-repeat;
     border-radius: 50%;
     top: -106.8%;
-    left: -75%;
-    animation: startBg 1s;
+    right: -75%;
+    animation: start_bg_sing_in 1s;
 }
 
-.sign_up_page .inputForm {
+.sign_in_page .inputForm {
     padding: 50px 0;
     position: fixed;
     height: 70%;
     width: 30%;
-    left: 60%;
+    right: 60%;
     bottom: 0%;
     top: 0;
     margin: auto;
@@ -55,33 +51,33 @@
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    animation: startForm 1s ease-in-out;
+    animation: start_form_sing_in 1s;
 }
 
-.sign_up_page .Image {
+.sign_in_page .Image {
     height: 400px;
     position: fixed;
     top: 34%;
-    left: 27%;
+    right: 57%;
     animation: startImg 1s;
 }
 
-.sign_up_page .Image img {
+.sign_in_page .Image img {
     position: fixed;
     height: 450px;
 }
 
-.sign_up_page .gif {
+.sign_in_page .gif {
     opacity: 0;
     z-index: 2;
 }
 
-.sign_up_page .title {
+.sign_in_page .title {
     font-size: 40px;
     font-weight: 900;
 }
 
-.sign_up_page .inputForm input {
+.sign_in_page .inputForm input {
     width: 22rem;
     height: 2.5rem;
     border-radius: 25px;
@@ -91,14 +87,14 @@
     color: black;
 }
 
-.sign_up_page .inputForm i {
+.sign_in_page .inputForm i {
     position: fixed;
     margin-top: 10px;
     margin-left: 1rem;
     color: #acacac;
 }
 
-.sign_up_page .inputForm button {
+.sign_in_page .inputForm button {
     width: 11rem;
     height: 2.2rem;
     border-radius: 25px;
@@ -108,7 +104,7 @@
     color: white;
 }
 
-.sign_up_page .socialIcons {
+.sign_in_page .socialIcons {
     width: 230px;
     height: 50px;
     display: flex;
@@ -117,7 +113,7 @@
     align-items: center;
 }
 
-.sign_up_page .socialIcons div {
+.sign_in_page .socialIcons div {
     border: 2px solid #acacac;
     width: 50px;
     height: 50px;
@@ -127,21 +123,21 @@
     border-radius: 25px;
 }
 
-.sign_up_page .socialIcons div i {
+.sign_in_page .socialIcons div i {
     margin: 0;
     color: #acacac;
 }
 
-.sign_up_page .signUpWith {
+.sign_in_page .signUpWith {
     text-decoration: underline;
     font-size: 20px;
 }
 
-.sign_up_page .orSignIn {
+.sign_in_page .or_sign_up {
     position: fixed;
     color: white;
     top: 10%;
-    left: 5%;
+    right: 10%;
     text-align: center;
     width: 400px;
     display: flex;
@@ -149,10 +145,10 @@
     justify-content: space-between;
     align-items: center;
     height: 150px;
-    animation: startSignInDiv 1s;
+    animation: start_sign_up_div 1s;
 }
 
-.sign_up_page .orSignIn button {
+.sign_in_page .or_sign_up button {
     width: 11rem;
     height: 2.2rem;
     border-radius: 25px;
@@ -165,17 +161,17 @@
 
 /* on hover */
 
-.sign_up_page .inputForm button:hover {
+.sign_in_page .inputForm button:hover {
     color: black;
     border: 2px solid black;
 }
 
-.sign_up_page .orSignIn button:hover {
+.sign_in_page .or_sign_up button:hover {
     border: 2px solid black;
     color: black;
 }
 
-.sign_up_page .socialIcons div:hover {
+.sign_in_page .socialIcons div:hover {
     border-color: black;
 }
 
@@ -183,10 +179,10 @@
     color: black;
 }
 
-.sign_up_page .Image:hover .gif {
+.sign_in_page .Image:hover .gif {
     opacity: 1;
 }
 
-.sign_up_page .Image:hover .staticImg {
+.sign_in_page .Image:hover .staticImg {
     opacity: 0;
 }

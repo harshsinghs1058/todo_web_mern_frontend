@@ -2,8 +2,9 @@ import "./sign_up.css";
 import React from "react";
 import studyGif from "./../../assets/gif/study.gif";
 import studyImg from "./../../assets/images/study.png";
+import { Link } from "react-router-dom";
 export default function SignUpPage() {
-    return <div className="page">
+    return <div className="sign_up_page">
         <div className="container">
         </div >
         <div className="inputForm">
@@ -37,7 +38,7 @@ export default function SignUpPage() {
         <div className="orSignIn">
             <h1>One of Us?</h1>
             <p>blog it is a platform where you can share your knowledge or the experience </p>
-            <button>Sign In</button>
+            <button><Link to="/sign-in">Sign In</Link></button>
         </div>
     </div >
 
