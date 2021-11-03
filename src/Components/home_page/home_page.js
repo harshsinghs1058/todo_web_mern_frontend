@@ -11,7 +11,6 @@ export default function HomePage() {
             <h3>Sign up page link</h3>
             <button>
                 <Link to="sign-up">Sign Up Page</Link>
-
             </button>
         </div>
     )
