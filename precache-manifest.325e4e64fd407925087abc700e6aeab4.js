@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c9e36bdc4d29d361304dc033f5e8d901",
+    "revision": "1af8d257fb6b3f41d7f3988380786c2c",
     "url": "/todo_web_mern_frontend/index.html"
   },
   {
-    "revision": "4b109d3fddbbaf4eb8a7",
+    "revision": "dededf24451c2474755e",
     "url": "/todo_web_mern_frontend/static/css/main.da8c2a34.chunk.css"
   },
   {
-    "revision": "7e16a2e567b17c8651b1",
-    "url": "/todo_web_mern_frontend/static/js/2.952b8562.chunk.js"
+    "revision": "591c5471976d0f80fd9c",
+    "url": "/todo_web_mern_frontend/static/js/2.b3c4aaff.chunk.js"
   },
   {
     "revision": "f7e623707d9b37a3821ec4c3548a4309",
-    "url": "/todo_web_mern_frontend/static/js/2.952b8562.chunk.js.LICENSE.txt"
+    "url": "/todo_web_mern_frontend/static/js/2.b3c4aaff.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "4b109d3fddbbaf4eb8a7",
-    "url": "/todo_web_mern_frontend/static/js/main.6423ffd0.chunk.js"
+    "revision": "dededf24451c2474755e",
+    "url": "/todo_web_mern_frontend/static/js/main.e8d4b2bf.chunk.js"
   },
   {
     "revision": "82af10c76c7dcf21a6da",
