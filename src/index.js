@@ -12,7 +12,7 @@ import SignUpPage from "./Components/sign_up_page/sign_up_page";
 import "./global.css";
 function App() {
     return (
-        <HashRouter basename="blog-web">
+        <HashRouter>
             <Switch>
                 <Route exact path='/' component={HomePage}></Route>
                 <Route exact path='/sign-in' component={SignInPage}></Route>
