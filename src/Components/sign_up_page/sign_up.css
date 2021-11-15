@@ -85,15 +85,16 @@
     width: 22rem;
     height: 2.5rem;
     border-radius: 25px;
-    font-size: 1.5rem;
-    padding-left: 34px;
+    font-size: 1.4rem;
+    padding-left: 37px;
+    padding-right: 15px;
     border: 2px solid #acacac;
     color: black;
 }
 
 .sign_up_page .inputForm i {
     position: fixed;
-    margin-top: 10px;
+    margin-top: 12px;
     margin-left: 1rem;
     color: #acacac;
 }
@@ -160,7 +161,7 @@
     font-size: 1.6rem;
     border: 2px solid white;
     color: #0092E0;
-    text-decoration: none;
+    cursor: pointer;
 }
 
 /* on hover */
@@ -189,4 +190,12 @@
 
 .sign_up_page .Image:hover .staticImg {
     opacity: 0;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.error{
+    margin-left: 38px;
+    color:red;
 }

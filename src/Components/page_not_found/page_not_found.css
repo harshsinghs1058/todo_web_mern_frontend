@@ -1,0 +1,30 @@
+#page_not_found{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:column ;
+    text-align: center;
+}
+#page_not_found h1{
+    font-size: 12rem;
+}
+#page_not_found h2{
+    font-size: 3.6rem;
+}
+
+#page_not_found button{
+    border-radius: 25px;
+    padding: 5px 30px;
+    font-size: 2rem;
+    margin-top:2% ;
+    color: rgb(226, 240, 38);
+    background-color: rgb(25, 86, 253);
+    border:2px solid rgb(226, 240, 38);
+}
+
+#page_not_found button:hover{
+    color: black;
+    border: 4px solid black;
+}
