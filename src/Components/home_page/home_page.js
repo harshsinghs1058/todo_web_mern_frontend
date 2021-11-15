@@ -1,17 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Navigate } from "react-router-dom";
+import { useAuth } from "../../context/auth_context";
 export default function HomePage() {
-    return (
-        <div>
-            <h1>This is Home page still under construction</h1>
-            <h3>Sign in page link</h3>
-            <button>
-                <Link to="sign-in">Sign In Page</Link>
-            </button>
-            <h3>Sign up page link</h3>
-            <button>
-                <Link to="sign-up">Sign Up Page</Link>
-            </button>
-        </div>
-    )
+  const [auth] = useAuth(useAuth);
+  console.log(auth.isSignedIn);
+  if (auth.isSignedIn === true) return <Navigate to={`/${auth.email}/todos`} />;
+  else return <Navigate to='/sign-in' />;
 }

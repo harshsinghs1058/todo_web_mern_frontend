@@ -78,7 +78,7 @@ function SignInPage() {
       <form className='inputForm' onSubmit={handleFormSubmission}>
         <h1 className='title'>Sign In</h1>
         <div>
-          <i class='fas fa-user'></i>
+          <i className='fas fa-user'></i>
           <input
             placeholder='Email'
             type='name'
@@ -95,7 +95,7 @@ function SignInPage() {
         </div>
 
         <div>
-          <i class='fas fa-key'></i>
+          <i className='fas fa-key'></i>
           <input
             placeholder='Password'
             type='password'
