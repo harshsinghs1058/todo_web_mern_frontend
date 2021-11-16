@@ -50,7 +50,7 @@ export default function Todos() {
         setTodos(Todos);
         setNewTask("");
       } catch (err) {
-        alert(err);
+        alert("An error has occurred Please refresh");
       }
     }
   };
@@ -66,8 +66,7 @@ export default function Todos() {
       const Todos = await getTodo();
       setTodos(Todos);
     } catch (err) {
-      console.log(err);
-      alert("An error has occurred");
+      alert("An error has occurred Please refresh");
     }
   }
 
@@ -83,8 +82,7 @@ export default function Todos() {
       const Todos = await getTodo();
       setTodos(Todos);
     } catch (err) {
-      console.log(err);
-      alert("An error has occurred");
+      alert("An error has occurred Please refresh");
     }
   }
 
@@ -92,7 +90,6 @@ export default function Todos() {
     const res = await axios.get(
       process.env.REACT_APP_URL + `todo/getTodos/${userID}`
     );
-    console.log(res);
     return res.data;
   };
 
