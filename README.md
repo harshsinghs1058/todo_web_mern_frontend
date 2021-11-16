@@ -1,6 +1,6 @@
 # [Front End URL](https://harshsinghs1058.github.io/todo_web_mern_frontend)
 
-# [Backend End URL](https://harshsinghs1058.github.io/todo_web_mern_backend)
+# [Backend End URL](https://github.com/harshsinghs1058/todo_web_mern_backend)
 
 ## Stacks Used
 
