@@ -6,6 +6,7 @@ import studyGif from "../../assets/gif/study.gif";
 import studyImg from "../../assets/images/study.png";
 import { useAuth } from "../../context/auth_context";
 import "./sign_in.css";
+import loading_gif from "./../../assets/gif/loading_gif.gif";
 
 const initialValues = {
   email: "",
@@ -32,6 +33,7 @@ const validate = (values) => {
 };
 function SignInPage() {
   //required
+  const [isLoading, setIsLoading] = useState(false);
   const formik = useFormik({ initialValues, validate });
   const [allEdited, setAllEdited] = useState(false);
   // eslint-disable-next-line no-unused-vars
@@ -43,8 +45,8 @@ function SignInPage() {
     event.preventDefault();
     setAllEdited(true);
     if (!(formik.errors.email || formik.errors.password)) {
-      console.log(process.env.REACT_APP_URL + "user/signUp");
       try {
+        setIsLoading(true);
         const res = await axios.post(
           process.env.REACT_APP_URL + "user/signIn",
           formik.values
@@ -68,6 +70,7 @@ function SignInPage() {
         if (err.response) alert(err.response.data.message);
         else alert(err);
       }
+      setIsLoading(false);
     }
   };
 
@@ -109,7 +112,11 @@ function SignInPage() {
             <div className='error'>{formik.errors.password}</div>
           )}
         </div>
-        <button>Sign In</button>
+        {isLoading ? (
+          <img src={loading_gif} className='loading_gif' alt='loading' />
+        ) : (
+          <button>Sign In</button>
+        )}
         <p className='signUpWith'>or sign In with social platforms</p>
         <div className='socialIcons'>
           <div>

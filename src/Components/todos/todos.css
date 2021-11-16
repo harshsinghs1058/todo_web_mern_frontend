@@ -1,10 +1,12 @@
 
 body {
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     background-color: aliceblue;
 }
-
+#todo_page{
+    padding-bottom: 25px;
+}
 #nav_bar {
     width: 100vw;
     background-color: black;
@@ -57,7 +59,6 @@ body {
     margin: 0 auto;
     margin-top: 2.3vw;
     border-radius: 25px;
-    border: 2px solid grey;
 }
 
 #container2 {
@@ -70,13 +71,15 @@ body {
 #todo_list {
     background-color: grey;
     height: 100px;
-    transform: translateY(-3px);
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
+    width: 100%;
+    border:2px solid grey;
+    border-radius: 20px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
     color: white;
     display: flex;
-    padding-left: 2rem;
     align-items: center;
+    padding-left: 2.5rem;
 }
 
 #new_todo_item {
@@ -113,6 +116,10 @@ body {
     border: 2px solid grey;
     list-style-type: none;
 }
+.tasks_items div{
+    display: inline;
+}
+
 
 .tasks_items_input{
     background-color: white;
@@ -130,12 +137,27 @@ body {
     width: 24px;
     cursor: pointer;
     float: right;
-    bottom: 3px;
-    right: 5px;
+    bottom: 2px;
 }
-
 
 #todo_is_empty{
     text-align: center;
     margin-top: 100px;
+}
+#loading_gif_small{
+    height: 35px;
+    width: 35px;
+    position: relative;
+    top: 13px;
+}
+#update_todo_container{
+    display: flex;
+    align-items: center;
+}
+
+#loading_input{
+    height: 35px;
+    width: 35px;
+    margin-top: 10px;
+    margin-left: 10px;
 }

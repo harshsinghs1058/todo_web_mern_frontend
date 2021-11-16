@@ -4,6 +4,7 @@ import { useParams } from "react-router";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/auth_context";
 import "./todos.css";
+import loading_gif from "./../../assets/gif/loading_gif.gif";
 import TodoItem from "./todoItem";
 //main default function
 export default function Todos() {
@@ -13,6 +14,7 @@ export default function Todos() {
   const [newTask, setNewTask] = useState("");
   const [validationError, setValidationError] = useState(false);
   const [todos, setTodos] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     let mounted = true;
@@ -42,6 +44,7 @@ export default function Todos() {
       setValidationError(true);
     } else {
       try {
+        setIsLoading(true);
         await axios.post(process.env.REACT_APP_URL + "todo/addTask", {
           task: newTask,
           email: auth.email,
@@ -49,6 +52,7 @@ export default function Todos() {
         const Todos = await getTodo();
         setTodos(Todos);
         setNewTask("");
+        setIsLoading(false);
       } catch (err) {
         alert("An error has occurred Please refresh");
       }
@@ -131,9 +135,13 @@ export default function Todos() {
               onChange={(evt) => setNewTask(evt.target.value)}
               autoFocus
             />
-            <button id='add_new_task_btn' onClick={handleAddNewTask}>
-              Add Task
-            </button>
+            {isLoading ? (
+              <img id='loading_gif_small' src={loading_gif} alt='loading gif' />
+            ) : (
+              <button id='add_new_task_btn' onClick={handleAddNewTask}>
+                Add Task
+              </button>
+            )}
             {validationError && (
               <div className='error'>New Task Is Required</div>
             )}

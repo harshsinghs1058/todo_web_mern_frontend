@@ -186,3 +186,9 @@
 .sign_in_page .Image:hover .staticImg {
     opacity: 0;
 }
+
+
+.loading_gif{
+    height: 35px;
+    width: 35px;
+}

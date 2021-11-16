@@ -6,6 +6,8 @@ import { Link, useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
 import axios from "axios";
 import { useAuth } from "../../context/auth_context";
+import loading_gif from "./../../assets/gif/loading_gif.gif";
+
 const initialValues = {
   email: "",
   password: "",
@@ -37,6 +39,7 @@ const validate = (values) => {
   return errors;
 };
 export default function SignUpPage() {
+  const [isLoading, setIsLoading] = useState(false);
   const formik = useFormik({ initialValues, validate });
   const [allEdited, setAllEdited] = useState(false);
 
@@ -55,7 +58,7 @@ export default function SignUpPage() {
         formik.errors.confirmPassword
       )
     ) {
-      console.log(process.env.REACT_APP_URL + "user/signUp");
+      setIsLoading(true);
       try {
         const res = await axios.post(
           process.env.REACT_APP_URL + "user/signUp",
@@ -80,6 +83,7 @@ export default function SignUpPage() {
         if (err.response) alert(err.response.data.message);
         else alert(err);
       }
+      setIsLoading(false);
     }
   };
 
@@ -136,7 +140,11 @@ export default function SignUpPage() {
             <div className='error'>{formik.errors.confirmPassword}</div>
           )}
         </div>
-        <button>Sign Up</button>
+        {isLoading ? (
+          <img src={loading_gif} className='loading_gif' alt='loading' />
+        ) : (
+          <button>Sign Up</button>
+        )}
         <p className='signUpWith'>or sign up with social platforms</p>
         <div className='socialIcons'>
           <div>
