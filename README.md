@@ -1,6 +1,6 @@
-# [Front End URL](https://harshsinghs1058.github.io/todo_web_mern_frontend)
+# [Front End URL](https://harshsinghs1058.github.io/todo_web_mern_frontend) - hosted on github-pages
 
-# [Backend End URL](https://github.com/harshsinghs1058/todo_web_mern_backend)
+# [Backend End URL](https://github.com/harshsinghs1058/todo_web_mern_backend) - deployed on heroku
 
 ## Stacks Used
 
@@ -24,7 +24,10 @@
 - Todos page
 - Page Not Found
 
-### Note:Currently app is unresponsive
+### Note
+
+- Currently app is unresponsive
+- Sign in with Google, LinkedIn, facebook is not implemented yet
 
 ## ScreenShots
 
