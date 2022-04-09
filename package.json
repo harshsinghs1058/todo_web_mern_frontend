@@ -23,7 +23,7 @@
     "eject": "react-scripts eject",
     "predeploy": "yarn run build",
     "deploy": "gh-pages -d build",
-    "upgrade":"yarn upgrade --latest"
+    "upgrade": "yarn upgrade --latest"
   },
   "eslintConfig": {
     "extends": [
@@ -45,5 +45,9 @@
   },
   "devDependencies": {
     "gh-pages": "^3.2.3"
-  }
+  },
+  "main": "index.js",
+  "repository": "https://github.com/harshsinghs1058/todo_web_mern_frontend.git",
+  "author": "harshsinghs1058 <harshsinghs1058@gmail.com>",
+  "license": "MIT"
 }

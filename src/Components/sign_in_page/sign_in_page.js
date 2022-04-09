@@ -39,6 +39,7 @@ function SignInPage() {
   // eslint-disable-next-line no-unused-vars
   const [auth, userSignIn, userSignOut] = useAuth(useAuth);
   const navigate = useNavigate();
+  const [width, setWidth] = useState(window.screen.availWidth);
 
   //sign up form submission handler
   const handleFormSubmission = async (event) => {
@@ -74,18 +75,21 @@ function SignInPage() {
     }
   };
 
+  //function for managing width of screen
+  window.addEventListener("resize", () => setWidth(window.screen.availWidth));
+
   //jsx
   return (
-    <div className='sign_in_page'>
-      <div className='container'></div>
-      <form className='inputForm' onSubmit={handleFormSubmission}>
-        <h1 className='title'>Sign In</h1>
-        <div>
-          <i className='fas fa-user'></i>
+    <div className="sign_in_page">
+      <div className="container"></div>
+      <form className="inputForm" onSubmit={handleFormSubmission}>
+        <h1 className="title">Sign In</h1>
+        <div className="inputFields">
+          <i className="fas fa-user"></i>
           <input
-            placeholder='Email'
-            type='name'
-            name='email'
+            placeholder="Email"
+            type="name"
+            name="email"
             formNoValidate
             onChange={formik.handleChange}
             value={formik.values.email}
@@ -93,55 +97,55 @@ function SignInPage() {
             autoFocus
           />
           {formik.touched.email && (
-            <div className='error'>{formik.errors.email}</div>
+            <div className="error">{formik.errors.email}</div>
           )}
         </div>
 
-        <div>
-          <i className='fas fa-key'></i>
+        <div className="inputFields">
+          <i className="fas fa-key"></i>
           <input
-            placeholder='Password'
-            type='password'
-            name='password'
+            placeholder="Password"
+            type="password"
+            name="password"
             formNoValidate
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
             value={formik.values.password}
           />
           {(allEdited || formik.touched.password) && formik.errors.password && (
-            <div className='error'>{formik.errors.password}</div>
+            <div className="error">{formik.errors.password}</div>
           )}
         </div>
         {isLoading ? (
-          <img src={loading_gif} className='loading_gif' alt='loading' />
+          <img src={loading_gif} className="loading_gif" alt="loading" />
         ) : (
           <button>Sign In</button>
         )}
-        <p className='signUpWith'>or sign In with social platforms</p>
-        <div className='socialIcons'>
+        <p className="signUpWith">or sign In with social platforms</p>
+        <div className="socialIcons">
           <div>
-            <i className='fab fa-facebook fa-2x'></i>
+            <i className="fab fa-facebook fa-2x"></i>
           </div>
           <div>
-            <i className='fab fa-google fa-2x'></i>
+            <i className="fab fa-google fa-2x"></i>
           </div>
           <div>
-            <i className='fab fa-linkedin-in fa-2x'></i>
+            <i className="fab fa-linkedin-in fa-2x"></i>
           </div>
         </div>
       </form>
-      <div className='Image'>
-        <img src={studyGif} alt='Cool' className='gif' />
-        <img src={studyImg} alt='Cool' className='staticImg' />
-      </div>
-      <div className='or_sign_up'>
+      {width > 1200 && (
+        <div className="Image">
+          <img src={studyGif} alt="Cool" className="gif" />
+          <img src={studyImg} alt="Cool" className="staticImg" />
+        </div>
+      )}
+
+      <div className="or_sign_up">
         <h1>New here?</h1>
-        <p>
-          blog it is a platform where you can share your knowledge or the
-          experience{" "}
-        </p>
+        <p>MyTodo is a platform where you can store your tasks</p>
         <button>
-          <Link to='/sign-up'>Sign up</Link>
+          <Link to="/sign-up">Sign up</Link>
         </button>
       </div>
     </div>
