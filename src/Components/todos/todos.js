@@ -13,8 +13,12 @@ export default function Todos() {
   const navigate = useNavigate();
   const [newTask, setNewTask] = useState("");
   const [validationError, setValidationError] = useState(false);
-  const [todos, setTodos] = useState([]);
+  const [todos, setTodos] = useState("loading");
   const [isLoading, setIsLoading] = useState(false);
+  const [width, setWidth] = useState(window.screen.availWidth);
+
+  //on resize
+  window.addEventListener("resize", () => setWidth(window.screen.availWidth));
 
   useEffect(() => {
     let mounted = true;
@@ -43,6 +47,7 @@ export default function Todos() {
     if (newTask.length < 1) {
       setValidationError(true);
     } else {
+      setTodos("loading");
       try {
         setIsLoading(true);
         await axios.post(process.env.REACT_APP_URL + "todo/addTask", {
@@ -97,72 +102,63 @@ export default function Todos() {
     return res.data;
   };
 
-  //jsx for user is not logged in
-  if (!auth.isSignedIn || userID !== auth.email) {
-    return (
-      <div>
-        <h1> ERROR 404</h1>
-        <h2>
-          You are not authorized access this page ,if you think this is a
-          mistake then sign-in again.
-        </h2>
-      </div>
-    );
-  }
-
   return (
-    <div id='todo_page'>
-      <nav id='nav_bar'>
-        <li id='title'>TodoApp</li>
+    <div id="todo_page">
+      <nav id="nav_bar">
+        <li id="title">TodoApp</li>
         <div>
-          <li>{auth.email}</li>
-          <button id='sign_out' onClick={handleSignOut}>
+          {width > 750 && <li>{auth.email}</li>}
+          <button id="sign_out" onClick={handleSignOut}>
             Sign out
           </button>
         </div>
       </nav>
-      <div id='container'>
-        <div id='todo_list'>
+      <div id="container">
+        <div id="todo_list">
           <h1>Todo List</h1>
         </div>
-        <div id='container2'>
-          <div className='container3'>
+        <div id="container2">
+          <div className="container3">
             <input
-              type='text'
-              id='new_todo_item'
-              placeholder='New task'
+              type="text"
+              id="new_todo_item"
+              placeholder="New task"
               value={newTask}
               onChange={(evt) => setNewTask(evt.target.value)}
               autoFocus
             />
             {isLoading ? (
-              <img id='loading_gif_small' src={loading_gif} alt='loading gif' />
+              <img id="loading_gif" src={loading_gif} alt="loading gif" />
             ) : (
-              <button id='add_new_task_btn' onClick={handleAddNewTask}>
+              <button id="add_new_task_btn" onClick={handleAddNewTask}>
                 Add Task
               </button>
             )}
             {validationError && (
-              <div className='error'>New Task Is Required</div>
+              <div className="error">New Task Is Required</div>
             )}
           </div>
-          <div className='container3'>
-            <ul id='myList'>
-              {todos.length > 0 ? (
-                todos.map((element) => {
-                  return (
-                    <TodoItem
-                      element={element}
-                      handleDeleteTask={handleDeleteTask}
-                      key={element._id}
-                      handleUpdateTask={handleUpdateTask}
-                    />
-                  );
-                })
-              ) : (
-                <h1 id='todo_is_empty'> Todo Is Empty</h1>
-              )}
-            </ul>
+          <div className="container3">
+            {todos === "loading" ? (
+              <img id="loading_gif" src={loading_gif} alt="loading gif" />
+            ) : (
+              <div id="myList">
+                {todos.length > 0 ? (
+                  todos.map((element) => {
+                    return (
+                      <TodoItem
+                        element={element}
+                        handleDeleteTask={handleDeleteTask}
+                        key={element._id}
+                        handleUpdateTask={handleUpdateTask}
+                      />
+                    );
+                  })
+                ) : (
+                  <h1 id="todo_is_empty"> Todo Is Empty</h1>
+                )}
+              </div>
+            )}
           </div>
         </div>
       </div>

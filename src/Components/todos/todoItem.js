@@ -10,11 +10,11 @@ export default function TodoItem({
   const [task, setTask] = useState(element.task);
   const [isLoading, setIsLoading] = useState(false);
   return isEditable ? (
-    <div id='update_todo_container'>
+    <div id="update_todo_container">
       <input
         value={task}
         onKeyDown={() => {}}
-        className='tasks_items_input'
+        className="tasks_items_input"
         onKeyPress={async (key) => {
           if (key.key === "Enter" && task) {
             setIsLoading(true);
@@ -30,24 +30,24 @@ export default function TodoItem({
       {isLoading && (
         <img
           src={loading_gif}
-          id='loading_input'
-          className='delete_icon'
-          alt='delete button'
+          id="loading_input"
+          className="delete_icon"
+          alt="delete button"
         />
       )}
     </div>
   ) : (
-    <li className='tasks_items'>
+    <div className="tasks_items">
       <div onClick={() => setIsEditable(true)}>{element.task}</div>
       <img
         src={isLoading ? loading_gif : delete_icon}
-        className='delete_icon'
-        alt='delete button'
+        className="delete_icon"
+        alt="delete button"
         onClick={() => {
           setIsLoading(true);
           handleDeleteTask(element._id);
         }}
       />
-    </li>
+    </div>
   );
 }

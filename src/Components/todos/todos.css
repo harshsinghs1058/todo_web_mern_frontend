@@ -1,163 +1,200 @@
-
 body {
-    width: 100%;
-    height: 100vh;
-    background-color: aliceblue;
+  width: 100%;
+  height: 100vh;
+  background-color: aliceblue;
 }
-#todo_page{
-    padding-bottom: 25px;
+#todo_page {
+  padding-bottom: 25px;
 }
 #nav_bar {
-    width: 100vw;
-    background-color: black;
-    color: grey;
-    display: flex;
-    height: 75px;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0px 50px;
-    list-style-type: none;
-    font-size: 20px;
+  width: 100%;
+  background-color: black;
+  color: grey;
+  display: flex;
+  height: 75px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 50px;
+  list-style-type: none;
+  font-size: 20px;
 }
 
 #title {
-    color: white;
-    font-size: 40px;
+  color: white;
+  font-size: 40px;
 }
 
-#nav_bar> div {
-    display: flex;
-    color: grey;
-    align-items: center;
-
+#nav_bar > div {
+  display: flex;
+  color: grey;
+  align-items: center;
 }
 
-#sign_out{
-    width: 11rem;
-    height: 2.6rem;
-    margin-left:20px ;
-    border-radius: 25px;
-    background-color: white;
-    font-size: 1.6rem;
-    color: #000000;
-    cursor: pointer;
-    border:none
+#sign_out {
+  width: 11rem;
+  height: 2.6rem;
+  margin-left: 20px;
+  border-radius: 25px;
+  background-color: white;
+  font-size: 1.6rem;
+  color: #000000;
+  cursor: pointer;
+  border: none;
 }
-#sign_out:hover{
-    border:4px solid #0092E0;
-    color: #0092E0; 
+#sign_out:hover {
+  border: 4px solid #0092e0;
+  color: #0092e0;
 }
 
-#nav_bar>div>li {
-    margin-left: 20px;
+#nav_bar > div > li {
+  margin-left: 20px;
 }
 
 #container {
-    width: 94vw;
-    padding-bottom: 12px;
-    background-color: aqua;
-    margin: 0 auto;
-    margin-top: 2.3vw;
-    border-radius: 25px;
+  width: 94vw;
+  padding-bottom: 12px;
+  background-color: aqua;
+  margin: 0 auto;
+  margin-top: 2.3vw;
+  border-radius: 25px;
 }
 
 #container2 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 64vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 64vh;
 }
 
 #todo_list {
-    background-color: grey;
-    height: 100px;
-    width: 100%;
-    border:2px solid grey;
-    border-radius: 20px;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    color: white;
-    display: flex;
-    align-items: center;
-    padding-left: 2.5rem;
+  background-color: grey;
+  height: 100px;
+  width: 100%;
+  border: 2px solid grey;
+  border-radius: 20px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding-left: 2.5rem;
 }
 
 #new_todo_item {
-    margin-top: 8px;
-    margin-right: 10px;
-    width: 366px;
-    height: 40px;
-    padding: 0px 10px;
-    font-size: 20px;
-    border-radius: 25px;
-    border: 2px solid grey;
+  margin-top: 8px;
+  margin-right: 10px;
+  width: 366px;
+  height: 40px;
+  padding: 0px 10px;
+  font-size: 20px;
+  border-radius: 25px;
+  border: 2px solid grey;
 }
 
 #add_new_task_btn {
-    height: 40px;
-    width: 150px;
-    font-size: 20px;
-    border-radius: 25px;
-    background-color: skyblue;
+  height: 40px;
+  width: 150px;
+  font-size: 20px;
+  border-radius: 25px;
+  background-color: skyblue;
 }
 
 .container3 {
-    width: 530px;
+  width: 530px;
 }
 
 .tasks_items {
-    background-color: yellow;
-    margin-top: 10px;
-    width: 530px;
-    height: 40px;
-    padding: 6px 10px;
-    font-size: 20px;
-    border-radius: 25px;
-    border: 2px solid grey;
-    list-style-type: none;
+  background-color: yellow;
+  margin-top: 10px;
+  width: 530px;
+  height: 40px;
+  padding: 6px 10px;
+  font-size: 20px;
+  border-radius: 25px;
+  border: 2px solid grey;
+  list-style-type: none;
 }
-.tasks_items div{
-    display: inline;
+.tasks_items div {
+  display: inline;
 }
 
-
-.tasks_items_input{
-    background-color: white;
-    margin-top: 10px;
-    width: 530px;
-    height: 40px;
-    padding: 6px 10px;
-    font-size: 20px;
-    border-radius: 25px;
-    border: 2px solid grey;
-    list-style-type: none;
+.tasks_items_input {
+  background-color: white;
+  margin-top: 10px;
+  width: 530px;
+  height: 40px;
+  padding: 6px 10px;
+  font-size: 20px;
+  border-radius: 25px;
+  border: 2px solid grey;
+  list-style-type: none;
 }
 .delete_icon {
-    position: relative;
-    width: 24px;
-    cursor: pointer;
-    float: right;
-    bottom: 2px;
+  position: relative;
+  width: 24px;
+  cursor: pointer;
+  float: right;
+  bottom: 2px;
 }
 
-#todo_is_empty{
-    text-align: center;
-    margin-top: 100px;
+#todo_is_empty {
+  text-align: center;
+  margin-top: 100px;
 }
-#loading_gif_small{
-    height: 35px;
-    width: 35px;
-    position: relative;
-    top: 13px;
+#loading_gif_small {
+  height: 35px;
+  width: 35px;
+  position: relative;
+  top: 13px;
 }
-#update_todo_container{
-    display: flex;
-    align-items: center;
+#update_todo_container {
+  display: flex;
+  align-items: center;
 }
 
-#loading_input{
-    height: 35px;
-    width: 35px;
-    margin-top: 10px;
-    margin-left: 10px;
+#loading_input {
+  height: 35px;
+  width: 35px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+@media screen and (max-width: 800px) {
+}
+@media screen and (max-width: 600px) {
+  #title {
+    font-size: 30px;
+  }
+  #nav_bar {
+    padding: 0 20px;
+  }
+  #sign_out {
+    width: 6rem;
+    height: 2.2rem;
+    margin-left: 1px;
+    font-size: 1.2rem;
+  }
+  .container3 {
+    width: 95%;
+  }
+  #new_todo_item {
+    width: 72%;
+  }
+  #add_new_task_btn {
+    width: 25%;
+    font-size: 16px;
+  }
+  .tasks_items {
+    margin: 10px 0;
+    width: 100%;
+  }
+}
+#loading_gif {
+  height: 100px;
+  width: 100px;
+  position: fixed;
+  margin: auto;
+  top: 0;
+  bottom: 0%;
+  left: 0;
+  right: 0;
 }
